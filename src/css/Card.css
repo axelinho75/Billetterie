@@ -1,0 +1,56 @@
+.card-item {
+    background-color: #ffffff;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 20px;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image-card {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.body-card {
+    padding: 1.5rem;
+}
+
+.title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.location {
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.location::before {
+    content: '📍';
+    margin-right: 4px;
+    font-size: 0.8rem;
+}
+
+.price {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #007bff;
+    font-weight: 700;
+}
