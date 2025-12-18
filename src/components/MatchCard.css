@@ -1,0 +1,120 @@
+/* src/components/MatchCard.css */
+.match-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.match-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.match-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.match-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.match-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #001a4d;
+}
+
+.match-date,
+.match-location {
+  margin: 8px 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.match-footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.match-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff0000;
+}
+
+.match-seats {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.quantity-selector {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  align-items: center;
+}
+
+.quantity-selector button {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.quantity-selector button:hover {
+  background: #001a4d;
+  color: white;
+}
+
+.quantity-selector input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 26, 77, 0.3);
+}
+
+.add-to-cart-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

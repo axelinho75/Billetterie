@@ -43,7 +43,7 @@
 }
 
 .location::before {
-    content: '📍';
+    content: '';
     margin-right: 4px;
     font-size: 0.8rem;
 }
