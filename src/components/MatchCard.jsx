@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './MatchCard.css';
+import defaultImage from '../assets/image.png';
 
 export default function MatchCard({ match, onAddToCart }) {
     const [quantity, setQuantity] = useState(1);
@@ -11,9 +12,16 @@ export default function MatchCard({ match, onAddToCart }) {
         }
     };
 
+    const src = match.image || defaultImage;
+
     return (
         <div className="match-card">
-            <img src={match.image} alt={match.title} className="match-image"/>
+            <img
+                src={src}
+                alt={match.title || 'match image'}
+                className="match-image"
+                onError={(e) => { e.currentTarget.src = defaultImage; }}
+            />
             <div className="match-content">
                 <h2 className="match-title">{match.title}</h2>
                 <p className="match-date">{match.date} à {match.time}</p>
